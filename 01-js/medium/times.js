@@ -8,5 +8,25 @@ Hint - use Date class exposed in JS
 */
 
 function calculateTime(n) {
-    return 0.01;
+    const startTime = Date.now();
+    let sum = sumOf(n);
+    const endTime = Date.now();
+    return ((endTime - startTime) / parseFloat(1000));
 }
+
+function sumOf(n) {
+    let sum = 0;
+    for(let i = 1; i < n; i++) {
+        sum += i;
+    }
+    return sum;
+}
+
+let totalTime = calculateTime(100);
+console.log(`Time took 1-100 ${totalTime}`);
+
+totalTime = calculateTime(1_00_000);
+console.log(`Time took 1-1_00_000 ${totalTime}`);
+
+totalTime = calculateTime(1_000_000_000);
+console.log(`Time took 1-1_000_000_000 ${totalTime}`);
