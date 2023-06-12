@@ -6,6 +6,7 @@
   "scripts": {
     "test-anagram": "node 01-js/easy/anagram.js",
     "test-expenditure-analysis": "node 01-js/easy/expenditure-analysis.js",
+    "test-palindrome": "node 01-js/medium/palindrome.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pratik",
