@@ -4,6 +4,7 @@
   "description": "Week 1 assignment",
   "main": "index.js",
   "scripts": {
+    "test-anagram": "node 01-js/easy/anagram.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Pratik",

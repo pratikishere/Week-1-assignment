@@ -8,7 +8,20 @@
 */
 
 function isAnagram(str1, str2) {
+    str1 = str1.replaceAll(' ','');
+    str2 = str2.replaceAll(' ','');
 
+    if(str1.length !== str2.length) {
+      throw Error("Invalid string length. Please pass strings with equal length");
+    }
+
+    console.log(str1);
+    console.log(str2);
+
+    let sortedStr1 = str1.toLowerCase().split('').sort().join('');
+    let sortedStr2 = str2.toLowerCase().split('').sort().join('');
+
+    return (sortedStr1 === sortedStr2)
 }
 
 module.exports = isAnagram;
