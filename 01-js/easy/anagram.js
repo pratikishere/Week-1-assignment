@@ -12,16 +12,22 @@ function isAnagram(str1, str2) {
     str2 = str2.replaceAll(' ','');
 
     if(str1.length !== str2.length) {
-      throw Error("Invalid string length. Please pass strings with equal length");
+      return false;
     }
-
-    console.log(str1);
-    console.log(str2);
-
+    
     let sortedStr1 = str1.toLowerCase().split('').sort().join('');
     let sortedStr2 = str2.toLowerCase().split('').sort().join('');
-
+    
     return (sortedStr1 === sortedStr2)
 }
+
+let input1 = isAnagram(" as", "s  ");
+console.log(`output1 ${input1}`);
+
+let input2 = isAnagram("Sun sets in the west", "snu etss nihte eswt");
+console.log(`output2 ${input2}`);
+
+let input3 = isAnagram("JOKER", "poker");
+console.log(`output3 ${input3}`);
 
 module.exports = isAnagram;
